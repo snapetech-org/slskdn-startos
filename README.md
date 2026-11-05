@@ -12,7 +12,7 @@ It persists `/app`, `/downloads`, and `/music`, exposes the web UI on port
 The Start9 SDK and Docker are required:
 
 ```sh
-npm install
+npm ci
 npm run check
 npm run build
 make
@@ -25,6 +25,8 @@ link plus package details sent to `submissions@start9labs.com`.
 
 Upstream: <https://github.com/snapetech/slskdn>
 
+The wrapper uses StartOS SDK 4.0.0 and its dependency builder API. Regenerate the lockfile from a clean dependency tree when upgrading the SDK to avoid retaining obsolete bundled tooling.
+
 ## Security scanning
 
-Run scripts/security-scan-local.sh for local Semgrep Community Edition and applicable Trivy scans. Public GitHub Actions workflows run these scans on changes and weekly, alongside any existing CodeQL workflow. See docs/security-scanning.md for offline setup and updates. Run scripts/install-security-hooks.sh once to enable the staged Semgrep pre-commit hook.
+Run scripts/security-scan-local.sh for local Semgrep Community Edition and applicable Trivy scans. GitHub Actions scans use private ephemeral JIT runners. CodeQL is disabled. See docs/security-scanning.md for offline setup and updates. Run scripts/install-security-hooks.sh once to enable the staged Semgrep pre-commit hook.
