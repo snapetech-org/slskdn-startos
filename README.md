@@ -29,4 +29,4 @@ The wrapper uses StartOS SDK 4.0.0 and its dependency builder API. Regenerate th
 
 ## Security scanning
 
-Run scripts/security-scan-local.sh for local Semgrep Community Edition and applicable Trivy scans. GitHub Actions scans use private ephemeral JIT runners. CodeQL is allowed. See docs/security-scanning.md for offline setup and updates. Run scripts/install-security-hooks.sh once to enable the staged Semgrep pre-commit hook.
+Run scripts/security-scan-local.sh for local Semgrep Community Edition and applicable Trivy scans. GitHub Actions scans use GitHub-hosted runners. CodeQL is allowed. See docs/security-scanning.md for offline setup and updates. Run scripts/install-security-hooks.sh once to enable the staged Semgrep pre-commit hook.
